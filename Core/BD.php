@@ -1,6 +1,6 @@
 <?php
 
-include_once './../Config/BiblioConfig.php';
+require_once(__DIR__ . '/../Config/BiblioConfig.php');
 
 class BD
 {
