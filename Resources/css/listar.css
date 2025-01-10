@@ -1,0 +1,127 @@
+/* Listar CSS */
+
+body {
+    background-color: rgb(238, 202, 169);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Georgia', serif;
+    background-color: #f9f5e9;
+    border: 2px solid #c5a880;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+    border: 1px solid #c5a880;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #c5a880;
+    color: #fff;
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2e9d9;
+}
+
+tr:hover {
+    background-color: #e4d4ba;
+}
+
+caption {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #5a3c2a;
+}
+
+a {
+    font-size: 25px;
+    width: 100%;
+    color: #5a3c2a;
+    margin: 10px;
+}
+
+/* Insertar Libro CSS */
+
+.body-insert {
+    font-family: Arial, sans-serif;
+    background-color: #f3d1b0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #ffe4c4;
+    border: 1px solid #d2a679;
+    border-radius: 5px;
+    padding: 20px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #704b25;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #704b25;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #d2a679;
+    border-radius: 3px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #a6713d;
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #a6713d;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-group button:hover {
+    background-color: #704b25;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #704b25;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}

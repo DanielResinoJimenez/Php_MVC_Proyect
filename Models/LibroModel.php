@@ -20,8 +20,23 @@ class BiblioModel
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function modifyLibros($ISBN, $titulo, $autor){
-        $stmt = $this->pdo->query('UPDATE TABLE libros SET "titulo" = $titulo, "autor" = $autor WHERE "ISBN" = $ISBN');
+    public function insertLibros($ISBN, $nombre, $autor)
+    {
+        $stmt = $this->pdo->query("INSERT INTO libros values ('" . $ISBN . "', '" . $nombre . "', '" . $autor . "')");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function modifyLibros($ISBN, $titulo, $autor)
+    {
+        $stmt = $this->pdo->query('UPDATE libros SET titulo = "' . $titulo . '", autor = "' . $autor . '"  WHERE ISBN = "' . $ISBN . '"');
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function deleteLibro($ISBN)
+    {
+        $stmt = $this->pdo->query('DELETE FROM libros WHERE ISBN = "' . $ISBN . '"');
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

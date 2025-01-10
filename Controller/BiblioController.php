@@ -1,25 +1,47 @@
 <?php
 
+require_once "Core/BD.php";
+require_once "Models/LibroModel.php";
+
 class BiblioController
 {
 
     // Obtiene una instancia del modelo y de la vista de tareas
     private $model;
-    private $view;
+
+
     public function __construct()
     {
         $this->model = new BiblioModel();
-        $this->view = new ListarLibros();
     }
 
     // Muestra la lista de las tareas
     public function listarLibros()
     {
 
-        // Recupera la lista de tareas del modelo
-        $tareas = $this->model->getLibros();
+        // Recupera la lista de libros del modelo
+        $libros = $this->model->getLibros();
 
-        // Muestra la vista de la lista de tareas
-        $this->view->mostrarLibros($tareas);
+        include_once './View/ListarView.php';
+    }
+
+    // Insertar libros
+    public function insertarLibro($ISBN, $titulo, $autor)
+    {
+        $this->model->insertLibros($ISBN, $titulo, $autor);
+    }
+
+    // Modificar Libros
+
+    public function modificarLibro($ISBN, $titulo, $autor)
+    {
+        $this->model->modifyLibros($ISBN, $titulo, $autor);
+    }
+
+    // Borrar un Libro
+
+    public function borrarLibro($ISBN,)
+    {
+        $this->model->deleteLibro($ISBN);
     }
 }
