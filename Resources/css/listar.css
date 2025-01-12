@@ -1,5 +1,70 @@
 /* Listar CSS */
 
+/* Header Styles*/
+
+body,
+.title,
+.list,
+.list-item,
+.list-link {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4d9b8;
+    color: #5c3d1f;
+}
+
+/* Header */
+header {
+    background-color: #d3a97a;
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título */
+header h1 {
+    font-size: 2rem;
+    color: #5c3d1f;
+}
+
+/* Navegación */
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links li {
+    font-size: 1rem;
+}
+
+.nav-links a {
+    color: #5c3d1f;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+/* Listar Styles */
+
 body {
     background-color: rgb(238, 202, 169);
 }

@@ -35,4 +35,9 @@ if ($action == "loginUser") {
     $controller = new BiblioController();
     $controller->borrarLibro($_POST['isbn']);
     header("Location: ./View/BiblioView.php?action=null");
+} elseif ($action == "reservLibro") {
+    header("Location: ./View/ReservLibro.php");
+} elseif($action == "reservar"){
+    $controller = new BiblioController();
+    
 }

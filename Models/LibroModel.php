@@ -40,4 +40,13 @@ class BiblioModel
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function reservLibro($id_usu, $isbn)
+    {
+        $fechaReserva = date("Y-m-d");
+        $fechaDevuelta = date("Y-m-d", strtotime("+30 days"));
+        $stmt = $this->pdo->query('INSERT INTO prestamos VALUES ("' . $id_usu . '", "' . $isbn . '", "' . $fechaReserva . '", "' . $fechaDevuelta . '")');
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

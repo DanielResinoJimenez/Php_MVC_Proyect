@@ -40,8 +40,15 @@ class BiblioController
 
     // Borrar un Libro
 
-    public function borrarLibro($ISBN,)
+    public function borrarLibro($ISBN)
     {
         $this->model->deleteLibro($ISBN);
+    }
+
+    // Reservar un libro
+
+    public function reservLibro($id_usu, $isbn)
+    {
+        $this->model->reservLibro($id_usu, $isbn);
     }
 }
