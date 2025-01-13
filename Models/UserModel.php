@@ -30,4 +30,10 @@ class User
             echo "Error: " . $e->getMessage();
         }
     }
+
+    public function logout()
+    {
+        $_SESSION[] = "";
+        session_destroy();
+    }
 }

@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once './Controller/UserController.php';
 require_once './Controller/BiblioController.php';
 
@@ -35,9 +37,13 @@ if ($action == "loginUser") {
     $controller = new BiblioController();
     $controller->borrarLibro($_POST['isbn']);
     header("Location: ./View/BiblioView.php?action=null");
-} elseif ($action == "reservLibro") {
+} elseif ($action == "reservLibros") {
     header("Location: ./View/ReservLibro.php");
-} elseif($action == "reservar"){
+} elseif ($action == "reservar") {
+    header("Location: ./View/BiblioView.php?action=null");
     $controller = new BiblioController();
-    
+    $controller->reservLibro($_POST['id_usu'], $_POST['isbn']);
+} elseif ($action == "logout") {
+    $controller = new UserController();
+    $controller->logout();
 }

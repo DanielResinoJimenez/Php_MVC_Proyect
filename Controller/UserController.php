@@ -29,4 +29,10 @@ class UserController
             header("Location: index.php?user=not_found");
         }
     }
+
+    public function logout()
+    {
+        $this->user->logout();
+        header("Location: index.php");
+    }
 }

@@ -18,6 +18,7 @@
                     <li class="list-item"><a href="#" class="list-link">Catálogo</a></li>
                     <li class="list-item"><a href="#" class="list-link">Reservas</a></li>
                     <li class="list-item"><a href="#" class="list-link">Contacto</a></li>
+                    <li class="list-item"><a href="./../index.php?action=logout" class="list-link">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </div>
