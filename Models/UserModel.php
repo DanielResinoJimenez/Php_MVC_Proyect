@@ -1,6 +1,5 @@
 <?php
-
-// Creamos la clase usuario
+session_start();
 
 class User
 {
@@ -23,6 +22,7 @@ class User
 
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 if ($row['nombre'] == $user && $row['contrasena'] == $pass) {
+                    $_SESSION['user_id'] = $row['id'];
                     return true;
                 }
             }
@@ -33,7 +33,7 @@ class User
 
     public function logout()
     {
-        $_SESSION[] = "";
+        $_SESSION = [];
         session_destroy();
     }
 }

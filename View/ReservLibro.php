@@ -13,8 +13,6 @@
         <h2>Reservar Libro</h2>
         <form method="POST" action="./../index.php?action=reservar">
             <div class="form-group">
-                <label for="isbn">ID USUARIO</label>
-                <input type="text" id="id" name="id_usu" placeholder="X" required>
                 <label for="isbn">ISBN</label>
                 <input type="text" id="isbn" name="isbn" placeholder="978XXXXXXXXXX" required>
             </div>

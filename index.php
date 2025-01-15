@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 require_once './Controller/UserController.php';
 require_once './Controller/BiblioController.php';
 
